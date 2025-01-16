@@ -1,5 +1,4 @@
 "use strict";
-
 const addEventOnElem = function (elem, type, callback) {
   if (elem.length > 1) {
     for (let i = 0; i < elem.length; i++) {
@@ -77,7 +76,7 @@ jQuery(document).ready(function ($) {
 });
 
 /**
- * Animate elements on scroll using IntersectionObserver.
+ * Animate elements 
  */
 const observer = new IntersectionObserver(
   (entries) => {
@@ -97,9 +96,7 @@ document.querySelectorAll(".animate-on-scroll").forEach((el) => {
 });
 
 
-const aboutContent = document.querySelector(".about-content");
-const aboutImage = document.querySelector(".about-banner .img-holder img");
-const scrollUpBtn = document.getElementById("scrollUp");
+
 
 const handleAboutScroll = () => {
   const scrollY = window.scrollY;

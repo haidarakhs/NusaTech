@@ -1585,73 +1585,46 @@ body {
     transform: translateX(0);
   }
 }
+
 .animate__fadeInUp {
-  animation: fadeInUp 1s ease-in-out; 
+  animation: fadeInUp 0.8s ease-in-out; 
+  will-change: opacity, transform;
 }
 
 .animate__fadeInLeft {
-  animation: fadeInLeft 1s ease-in-out;
+  animation: fadeInLeft 0.8s ease-in-out;
+  will-change: opacity, transform;
 }
+
 .hero-content, .hero-banner {
   opacity: 0;
-  transition: opacity 1s ease-in-out; 
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out; 
+  will-change: opacity, transform;
 }
+
 .hero-content.animate__animated, .hero-banner.animate__animated {
   opacity: 1;
 }
+
 .hero-content {
-  animation-delay: 0.3s; 
-}
-.hero-banner {
-  animation-delay: 0.5s; 
-}
-.animate__fadeInUp {
-  animation: fadeInUp 1s ease-in-out; 
+  animation-delay: 0.2s; 
 }
 
-.animate__fadeInLeft {
-  animation: fadeInLeft 1s ease-in-out; 
+.hero-banner {
+  animation-delay: 0.4s; 
 }
 
 @media (max-width: 768px) {
   .animate__fadeInUp {
-    animation-duration: 1s; 
+    animation-duration: 0.8s; 
   }
 
   .animate__fadeInLeft {
-    animation-duration: 1s;
+    animation-duration: 0.8s;
   }
 
   .hero-content, .hero-banner {
-    transition: opacity 1s ease-in-out; 
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out; 
   }
 }
-
-
-/* animasi about */
-.about-banner .img-holder img {
-  opacity: 0;
-  transform: translateY(30px); 
-  transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.about-banner .img-holder img.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Animasi untuk elemen konten */
-.about-content {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.about-content.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-
 
