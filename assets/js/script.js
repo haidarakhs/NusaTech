@@ -78,42 +78,42 @@ jQuery(document).ready(function ($) {
 /**
  * Animate elements 
  */
-// const observer = new IntersectionObserver(
-//   (entries) => {
-//     entries.forEach((entry) => {
-//       if (entry.isIntersecting) {
-//         entry.target.classList.add("animate__animated", "animate__fadeInUp");
-//       } else {
-//         entry.target.classList.remove("animate__animated", "animate__fadeInUp");
-//       }
-//     });
-//   },
-//   { threshold: 0.1 } 
-// );
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate__animated", "animate__fadeInUp");
+      } else {
+        entry.target.classList.remove("animate__animated", "animate__fadeInUp");
+      }
+    });
+  },
+  { threshold: 0.1 } 
+);
 
-// document.querySelectorAll(".animate-on-scroll").forEach((el) => {
-//   observer.observe(el);
-// });
-
-
+document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+  observer.observe(el);
+});
 
 
-// const handleAboutScroll = () => {
-//   const scrollY = window.scrollY;
-
-//   aboutContent.classList.toggle("show", scrollY > 100);
-//   aboutImage.classList.toggle("show", scrollY > 100);
-//   scrollUpBtn.style.display = scrollY > 200 ? "block" : "none";
-// };
-
-// window.addEventListener("scroll", debounce(handleAboutScroll, 100));
 
 
-// function debounce(func, wait) {
-//   let timeout;
-//   return function (...args) {
-//     const context = this;
-//     clearTimeout(timeout);
-//     timeout = setTimeout(() => func.apply(context, args), wait);
-//   };
-// }
+const handleAboutScroll = () => {
+  const scrollY = window.scrollY;
+
+  aboutContent.classList.toggle("show", scrollY > 100);
+  aboutImage.classList.toggle("show", scrollY > 100);
+  scrollUpBtn.style.display = scrollY > 200 ? "block" : "none";
+};
+
+window.addEventListener("scroll", debounce(handleAboutScroll, 100));
+
+
+function debounce(func, wait) {
+  let timeout;
+  return function (...args) {
+    const context = this;
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(context, args), wait);
+  };
+}

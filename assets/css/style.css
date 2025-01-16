@@ -1564,7 +1564,7 @@ body {
 
 
 /* animasi home */
-/* @keyframes fadeInUp {
+@keyframes fadeInUp {
   0% {
     opacity: 0;
     transform: translateY(30px); 
@@ -1627,4 +1627,4 @@ body {
     transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out; 
   }
 }
- */
+
