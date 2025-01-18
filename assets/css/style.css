@@ -1565,37 +1565,40 @@ body {
 /* Animasi Umum */
 @keyframes fadeInUp {
   0% {
-      opacity: 0;
-      transform: translateY(40px);
+    opacity: 0;
+    transform: translateY(40px);
   }
   100% {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes fadeInLeft {
   0% {
-      opacity: 0;
-      transform: translateX(-50px);
+    opacity: 0;
+    transform: translateX(-50px);
   }
   100% {
-      opacity: 1;
-      transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
 @keyframes fadeInDown {
   0% {
-      opacity: 0;
-      transform: translateY(-40px);
+    opacity: 0;
+    transform: translateY(-40px);
   }
   100% {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-.animate__fadeInUp, .animate__fadeInLeft, .animate__fadeInDown {
+
+.animate__fadeInUp,
+.animate__fadeInLeft,
+.animate__fadeInDown {
   animation-duration: 1.2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
@@ -1613,29 +1616,28 @@ body {
 .animate__fadeInDown {
   animation-name: fadeInDown;
 }
-.hero-content, .hero-banner, .scroll-animate {
+.animate-on-scroll {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out;
 }
 
-.hero-content.animate__animated, .hero-banner.animate__animated, .scroll-animate.show {
+.animate-on-scroll.active {
   opacity: 1;
   transform: translateY(0);
 }
-.hero-content {
-  animation-delay: 0.4s;
+
+.hero-content,
+.hero-banner,
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out;
 }
 
-.hero-banner {
-  animation-delay: 0.6s;
-}
-@media (max-width: 768px) {
-  .animate__fadeInUp, .animate__fadeInLeft {
-      animation-duration: 1.5s;
-  }
-
-  .hero-content, .hero-banner {
-      transition-duration: 1.5s;
-  }
+.hero-content.active,
+.hero-banner.active,
+.scroll-animate.show {
+  opacity: 1;
+  transform: translateY(0);
 }
